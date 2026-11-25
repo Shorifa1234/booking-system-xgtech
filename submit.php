@@ -1,14 +1,17 @@
 <?php
 // Handles the "Book a Free Demo" form: validate, save, redirect back.
-require __DIR__ . '/includes/config.php';
-require __DIR__ . '/includes/data.php';
+require_once __DIR__ . '/includes/config.php';
+require_once __DIR__ . '/includes/data.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('Location: index.php');
     exit;
 }
 
-$back = 'index.php#contact';
+// Send the visitor back to the page the form was on (whitelisted).
+$pages  = ['index.php', 'classic.php', 'book-nboost.php'];
+$source = in_array($_POST['source'] ?? '', $pages, true) ? $_POST['source'] : 'index.php';
+$back   = $source . '#contact';
 
 // CSRF check
 if (!hash_equals($_SESSION['csrf'] ?? '', $_POST['csrf'] ?? '')) {
@@ -65,8 +68,8 @@ if ($errors) {
 
 try {
     $stmt = db()->prepare(
-        'INSERT INTO demo_requests (name, business, email, phone, service, demo_date, message, ip_address)
-         VALUES (:name, :business, :email, :phone, :service, :demo_date, :message, :ip)'
+        'INSERT INTO demo_requests (name, business, email, phone, service, demo_date, message, source_page, ip_address)
+         VALUES (:name, :business, :email, :phone, :service, :demo_date, :message, :source, :ip)'
     );
     $stmt->execute([
         ':name'      => $input['name'],
@@ -76,6 +79,7 @@ try {
         ':service'   => $input['service'],
         ':demo_date' => $input['date'] !== '' ? $input['date'] : null,
         ':message'   => $input['message'] !== '' ? $input['message'] : null,
+        ':source'    => $source,
         ':ip'        => $_SERVER['REMOTE_ADDR'] ?? null,
     ]);
 } catch (PDOException $e) {

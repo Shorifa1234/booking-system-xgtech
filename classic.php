@@ -1,6 +1,6 @@
 <?php
-require __DIR__ . '/includes/config.php';
-require __DIR__ . '/includes/data.php';
+require_once __DIR__ . '/includes/config.php';
+require_once __DIR__ . '/includes/data.php';
 
 $success = flash('success');
 $errors  = flash('errors') ?? [];
@@ -210,6 +210,7 @@ include __DIR__ . '/includes/header.php';
 
           <input type="hidden" name="csrf" value="<?= e(csrf_token()) ?>">
           <!-- Honeypot: real visitors leave this empty -->
+          <input type="hidden" name="source" value="classic.php">
           <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off">
 
           <div class="field-row">

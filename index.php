@@ -1,6 +1,6 @@
 <?php
-require __DIR__ . '/includes/config.php';
-require __DIR__ . '/includes/data.php';
+require_once __DIR__ . '/includes/config.php';
+require_once __DIR__ . '/includes/data.php';
 
 $success = flash('success');
 $errors  = flash('errors') ?? [];
@@ -177,6 +177,7 @@ $moments = [
               <div class="alert ok" data-static-ok hidden></div>
               <div class="alert bad" data-static-bad hidden></div>
               <?php if (!$static): ?><input type="hidden" name="csrf" value="<?= e(csrf_token()) ?>"><?php endif; ?>
+              <input type="hidden" name="source" value="index.php">
               <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
               <div class="t-grid">
@@ -238,5 +239,6 @@ $moments = [
 </footer>
 
 <script src="assets/js/day.js"></script>
+<?php if ($static): ?><script src="assets/js/static-form.js"></script><?php endif; ?>
 </body>
 </html>
