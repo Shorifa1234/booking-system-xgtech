@@ -90,21 +90,6 @@ h1 em{display:inline-block;padding-right:.08em}
 .again{width:100%;border:1px solid var(--line);background:#fff;border-radius:14px;padding:12px;font-weight:600;color:var(--navy)}
 .again:hover{border-color:var(--blue);color:var(--blue)}
 
-/* Live board */
-.board-wrap{padding:90px max(24px,5vw)}
-.board-title{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:34px;flex-wrap:wrap}
-.board-title h2{max-width:760px}
-.board-title p{max-width:340px;color:var(--fg2);margin:0}
-.board{background:var(--night);color:#e6f0fa;border-radius:24px;padding:10px 26px 18px;font-family:var(--mono);box-shadow:0 30px 80px rgba(11,27,45,.3);overflow:hidden}
-.b-row{display:grid;grid-template-columns:90px 1.6fr 1fr 150px;gap:16px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.07);font-size:15px;align-items:center}
-.b-head{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:#6f8aa6;border-color:rgba(255,255,255,.15)}
-#board-rows .b-row:last-child{border:0}
-.b-time{color:#ffd166;font-weight:600}
-.b-who{color:#9fb6cf}
-.b-st{color:#62e1bd;justify-self:start;padding:3px 10px;border-radius:6px;background:rgba(98,225,189,.1);font-size:13px}
-.b-row.flip{animation:flip .55s cubic-bezier(.3,1.4,.5,1) both}
-@keyframes flip{from{transform:perspective(600px) rotateX(-90deg);opacity:0}}
-
 /* The day timeline */
 .day{padding:80px max(24px,5vw) 40px}
 .day-intro{max-width:900px;margin:0 auto 90px;text-align:center}
@@ -199,7 +184,6 @@ h1 em{display:inline-block;padding-right:.08em}
   .hero{grid-template-columns:1fr;padding-top:120px;gap:50px}
   .widget{justify-self:start}
   .m-body{grid-template-columns:1fr;gap:28px}
-  .b-row{grid-template-columns:70px 1.4fr 1fr 130px;font-size:13px}
 }
 @media(max-width:720px){
   .links a:not(.pill-btn){display:none}
@@ -209,11 +193,6 @@ h1 em{display:inline-block;padding-right:.08em}
   .moment{grid-template-columns:1fr;margin-bottom:90px;padding-left:46px;position:relative}
   .m-node{position:absolute;left:11px;top:6px;margin:0}
   .m-time{position:static;font-size:24px;margin-bottom:10px}
-  .b-row{grid-template-columns:58px 1fr;gap:4px 12px;font-size:13px}
-  .b-row .b-who{grid-column:2;font-size:12px}
-  .b-row .b-st{grid-column:2}
-  .b-head span:nth-child(3),.b-head span:nth-child(4){display:none}
-  .board{padding:8px 18px 14px}
   .ticket{grid-template-columns:1fr}
   .ticket-main{border-radius:24px 24px 0 0}
   .ticket-stub{border-radius:0 0 24px 24px;border-left:0;border-top:2px dashed rgba(255,255,255,.5);flex-direction:row;flex-wrap:wrap;align-items:center}

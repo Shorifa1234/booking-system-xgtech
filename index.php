@@ -10,20 +10,6 @@ $dbError = flash('db_error');
 // STATIC_BUILD is set by build.php when exporting the GitHub Pages version.
 $static = defined('STATIC_BUILD');
 
-// Live board rows: time, what, who, status
-$board = [
-    ['09:00', 'Haircut & Style',     'Salon',          'Confirmed'],
-    ['09:30', 'Physio Assessment',   'Clinic',         'Checked in'],
-    ['10:00', 'First Aid Level 3',   'Training Centre','Paid'],
-    ['10:15', 'Driving Lesson',      'Driving School', 'Confirmed'],
-    ['10:45', 'Deep Tissue Massage', 'Spa',            'Reminder sent'],
-    ['11:00', 'Boiler Service',      'Maintenance',    'On the way'],
-    ['11:30', 'Strategy Session',    'Consultant',     'Paid'],
-    ['12:00', 'HIIT Class · 14/16',  'Gym',            'Filling up'],
-    ['12:30', 'Escape Room · 6 ppl', 'Events',         'Deposit paid'],
-    ['13:00', 'Brow Lamination',     'Beauty',         'Confirmed'],
-];
-
 // The day, hour by hour
 $moments = [
     ['06:00', 'Before you wake up', 'Three new bookings came in overnight.', 'Customers book when it suits them, at 1am or on a Sunday. Your calendar fills without a single phone call.', 'notifs'],
@@ -52,7 +38,6 @@ $moments = [
   <div class="clock" aria-hidden="true"><span class="clock-icon">☀</span><span class="clock-time">06:00</span></div>
   <nav class="links">
     <a href="#day">A day with us</a>
-    <a href="#board">Live board</a>
     <a href="<?= e($site['pricing_url']) ?>">Pricing</a>
     <a href="#contact" class="pill-btn">Get a free demo</a>
   </nav>
@@ -107,23 +92,6 @@ $moments = [
         <button class="again" id="again">↺ Book another</button>
       </div>
     </div>
-  </section>
-
-  <!-- DEPARTURES-STYLE LIVE BOARD -->
-  <section class="board-wrap" id="board">
-    <div class="board-title">
-      <h2>Today’s bookings, <em>across every kind of business</em></h2>
-      <p>Salons, clinics, gyms, trainers, tradespeople. If customers book your time, it fits.</p>
-    </div>
-    <div class="board" role="table" aria-label="Example bookings">
-      <div class="b-row b-head" role="row"><span>Time</span><span>Booking</span><span>Business</span><span>Status</span></div>
-      <div id="board-rows">
-        <?php foreach (array_slice($board, 0, 6) as [$t, $what, $who, $st]): ?>
-          <div class="b-row" role="row"><span class="b-time"><?= e($t) ?></span><span><?= e($what) ?></span><span class="b-who"><?= e($who) ?></span><span class="b-st"><?= e($st) ?></span></div>
-        <?php endforeach; ?>
-      </div>
-    </div>
-    <script type="application/json" id="board-data"><?= json_encode($board, JSON_HEX_TAG | JSON_HEX_AMP) ?></script>
   </section>
 
   <!-- A DAY, HOUR BY HOUR -->

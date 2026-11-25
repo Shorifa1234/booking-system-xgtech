@@ -175,27 +175,6 @@
 
   renderSlots();
 
-  /* ---------- Live board: rows roll in like a departures board ---------- */
-  var rowsEl = document.getElementById('board-rows');
-  var data = JSON.parse(document.getElementById('board-data').textContent);
-  var next = rowsEl.children.length;
-
-  function esc(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
-
-  if (!reduce) {
-    setInterval(function () {
-      if (document.hidden) return;
-      var r = data[next % data.length]; next++;
-      var row = document.createElement('div');
-      row.className = 'b-row flip';
-      row.setAttribute('role', 'row');
-      row.innerHTML = '<span class="b-time">' + esc(r[0]) + '</span><span>' + esc(r[1]) +
-        '</span><span class="b-who">' + esc(r[2]) + '</span><span class="b-st">' + esc(r[3]) + '</span>';
-      rowsEl.removeChild(rowsEl.firstElementChild);
-      rowsEl.appendChild(row);
-    }, 2600);
-  }
-
   /* ---------- Static (GitHub Pages) form: open an email draft ---------- */
   var sform = document.querySelector('form[data-static]');
   if (sform) {
