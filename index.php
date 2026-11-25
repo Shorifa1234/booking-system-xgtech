@@ -7,6 +7,9 @@ $errors  = flash('errors') ?? [];
 $old     = flash('old') ?? [];
 $dbError = flash('db_error');
 
+// STATIC_BUILD is set by build.php when exporting the GitHub Pages version.
+$static = defined('STATIC_BUILD');
+
 // Live board rows: time, what, who, status
 $board = [
     ['09:00', 'Haircut & Style',     'Salon',          'Confirmed'],
@@ -197,13 +200,15 @@ $moments = [
             <p>Want to see it running for your business? Reserve a free, personalised demo. It takes 30 seconds.</p>
           </div>
 
-          <form class="ticket" method="post" action="submit.php" novalidate>
+          <form class="ticket" method="post" action="submit.php" novalidate<?= $static ? ' data-static data-email="' . e($site['email']) . '"' : '' ?>>
             <div class="ticket-main">
               <?php if ($success): ?><div class="alert ok"><?= e($success) ?></div><?php endif; ?>
               <?php if ($dbError): ?><div class="alert bad"><?= e($dbError) ?></div>
               <?php elseif ($errors): ?><div class="alert bad">Please check the highlighted fields.</div><?php endif; ?>
 
-              <input type="hidden" name="csrf" value="<?= e(csrf_token()) ?>">
+              <div class="alert ok" data-static-ok hidden></div>
+              <div class="alert bad" data-static-bad hidden></div>
+              <?php if (!$static): ?><input type="hidden" name="csrf" value="<?= e(csrf_token()) ?>"><?php endif; ?>
               <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
               <div class="t-grid">

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Online booking that works around the clock. Bookings, reminders, payments and scheduling in one platform by XGTECH.">
+  <title>Bookings Around the Clock | XGTECH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/day.css">
+</head>
+<body>
+
+<header class="bar">
+  <a class="logo" href="#top">XG<span>TECH</span></a>
+  <div class="clock" aria-hidden="true"><span class="clock-icon">☀</span><span class="clock-time">06:00</span></div>
+  <nav class="links">
+    <a href="#day">A day with us</a>
+    <a href="#board">Live board</a>
+    <a href="https://xgtech.co.uk/pricing.html">Pricing</a>
+    <a href="#contact" class="pill-btn">Get a free demo</a>
+  </nav>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="tag"><span class="dot"></span> Online booking system</p>
+      <h1>Bookings that run<br><em>around the clock.</em></h1>
+      <p class="lead">Customers book and pay online, reminders send themselves, and your whole team works from one schedule, even while you sleep.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="pill-btn big">Get a free demo →</a>
+        <a href="https://xgtech.co.uk/booking_sys.html" class="ghost">See all features</a>
+      </div>
+    </div>
+
+    <!-- Interactive booking widget -->
+    <div class="widget" id="widget" aria-label="Try a booking">
+      <div class="widget-head">
+        <span>Try it: book a slot</span>
+        <span class="step-dots"><i class="on"></i><i></i><i></i></span>
+      </div>
+
+      <div class="w-pane" data-pane="pick">
+        <div class="services" role="tablist">
+          <button class="svc on" data-svc="Haircut" data-dur="45 min" data-price="£35">Haircut</button>
+          <button class="svc" data-svc="Consultation" data-dur="30 min" data-price="Free">Consultation</button>
+          <button class="svc" data-svc="Training" data-dur="2 hrs" data-price="£90">Training</button>
+        </div>
+        <div class="days" id="days"></div>
+        <div class="slots" id="slots"></div>
+        <button class="confirm" id="confirm" disabled>Choose a time</button>
+      </div>
+
+      <div class="w-pane ticket-pane" data-pane="done" hidden>
+        <div class="mini-ticket">
+          <div class="mt-top">
+            <small>Booking confirmed</small>
+            <strong id="t-svc">Haircut</strong>
+            <span id="t-when">Tue 3 Dec · 10:30</span>
+          </div>
+          <div class="mt-perf"></div>
+          <div class="mt-bottom">
+            <span><small>Duration</small><b id="t-dur">45 min</b></span>
+            <span><small>Price</small><b id="t-price">£35</b></span>
+            <span><small>Reminder</small><b>Scheduled ✓</b></span>
+          </div>
+        </div>
+        <p class="w-note">That’s what your customers see. Took you about 5 seconds.</p>
+        <button class="again" id="again">↺ Book another</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPARTURES-STYLE LIVE BOARD -->
+  <section class="board-wrap" id="board">
+    <div class="board-title">
+      <h2>Today’s bookings, <em>across every kind of business</em></h2>
+      <p>Salons, clinics, gyms, trainers, tradespeople. If customers book your time, it fits.</p>
+    </div>
+    <div class="board" role="table" aria-label="Example bookings">
+      <div class="b-row b-head" role="row"><span>Time</span><span>Booking</span><span>Business</span><span>Status</span></div>
+      <div id="board-rows">
+                  <div class="b-row" role="row"><span class="b-time">09:00</span><span>Haircut &amp; Style</span><span class="b-who">Salon</span><span class="b-st">Confirmed</span></div>
+                  <div class="b-row" role="row"><span class="b-time">09:30</span><span>Physio Assessment</span><span class="b-who">Clinic</span><span class="b-st">Checked in</span></div>
+                  <div class="b-row" role="row"><span class="b-time">10:00</span><span>First Aid Level 3</span><span class="b-who">Training Centre</span><span class="b-st">Paid</span></div>
+                  <div class="b-row" role="row"><span class="b-time">10:15</span><span>Driving Lesson</span><span class="b-who">Driving School</span><span class="b-st">Confirmed</span></div>
+                  <div class="b-row" role="row"><span class="b-time">10:45</span><span>Deep Tissue Massage</span><span class="b-who">Spa</span><span class="b-st">Reminder sent</span></div>
+                  <div class="b-row" role="row"><span class="b-time">11:00</span><span>Boiler Service</span><span class="b-who">Maintenance</span><span class="b-st">On the way</span></div>
+              </div>
+    </div>
+    <script type="application/json" id="board-data">[["09:00","Haircut \u0026 Style","Salon","Confirmed"],["09:30","Physio Assessment","Clinic","Checked in"],["10:00","First Aid Level 3","Training Centre","Paid"],["10:15","Driving Lesson","Driving School","Confirmed"],["10:45","Deep Tissue Massage","Spa","Reminder sent"],["11:00","Boiler Service","Maintenance","On the way"],["11:30","Strategy Session","Consultant","Paid"],["12:00","HIIT Class \u00b7 14\/16","Gym","Filling up"],["12:30","Escape Room \u00b7 6 ppl","Events","Deposit paid"],["13:00","Brow Lamination","Beauty","Confirmed"]]</script>
+  </section>
+
+  <!-- A DAY, HOUR BY HOUR -->
+  <section class="day" id="day">
+    <div class="day-intro">
+      <p class="tag"><span class="dot"></span> A day with XGTECH</p>
+      <h2>What your business looks like <em>when it books itself.</em></h2>
+    </div>
+
+    <div class="timeline">
+      <div class="spine"><div class="spine-fill"></div></div>
+
+            <article class="moment" data-time="06:00">
+        <div class="m-time">06:00</div>
+        <div class="m-node"></div>
+        <div class="m-body">
+          <div class="m-copy">
+            <small>Before you wake up</small>
+            <h3>Three new bookings came in overnight.</h3>
+            <p>Customers book when it suits them, at 1am or on a Sunday. Your calendar fills without a single phone call.</p>
+          </div>
+          <div class="m-visual v-notifs" aria-hidden="true">
+                          <div class="notif"><b>New booking</b><span>Sarah K. · Haircut · Tue 10:30</span><time>01:12</time></div>
+              <div class="notif"><b>New booking</b><span>Omar R. · Consultation · Wed 14:00</span><time>03:47</time></div>
+              <div class="notif"><b>New booking</b><span>Priya D. · Training x3 · Fri 09:00</span><time>05:20</time></div>
+                      </div>
+        </div>
+      </article>
+            <article class="moment" data-time="09:00">
+        <div class="m-time">09:00</div>
+        <div class="m-node"></div>
+        <div class="m-body">
+          <div class="m-copy">
+            <small>Reminders already sent</small>
+            <h3>Nobody forgets. Nobody no-shows.</h3>
+            <p>Confirmations and reminders go out on their own by email, so today’s customers turn up on time.</p>
+          </div>
+          <div class="m-visual v-mail" aria-hidden="true">
+                          <div class="mail">
+                <div class="mail-bar"><span>To: sarah@example.com</span><span class="sent">Sent ✓</span></div>
+                <strong>See you tomorrow at 10:30 👋</strong>
+                <p>Your Haircut & Style is booked for Tue 10:30. Need to move it? Reschedule in one tap.</p>
+                <span class="mail-btn">Reschedule</span>
+              </div>
+              <div class="counter"><b>64</b> reminders sent today</div>
+                      </div>
+        </div>
+      </article>
+            <article class="moment" data-time="11:30">
+        <div class="m-time">11:30</div>
+        <div class="m-node"></div>
+        <div class="m-body">
+          <div class="m-copy">
+            <small>Paid before they arrive</small>
+            <h3>Deposits and full payments, collected online.</h3>
+            <p>Choose per service: full amount, a deposit or pay on the day. Card, online and cash records sit in one place.</p>
+          </div>
+          <div class="m-visual v-receipt" aria-hidden="true">
+                          <div class="receipt">
+                <div class="r-line"><span>Brow Lamination</span><span>£45.00</span></div>
+                <div class="r-line"><span>Deposit taken</span><span>£15.00</span></div>
+                <div class="r-line muted"><span>Due on the day</span><span>£30.00</span></div>
+                <div class="r-total"><span>Card •••• 4242</span><span class="paid">PAID</span></div>
+              </div>
+                      </div>
+        </div>
+      </article>
+            <article class="moment" data-time="14:00">
+        <div class="m-time">14:00</div>
+        <div class="m-node"></div>
+        <div class="m-body">
+          <div class="m-copy">
+            <small>Everyone knows where to be</small>
+            <h3>Staff, rooms and resources, on one timeline.</h3>
+            <p>Assign people and rooms to each booking. Clashes are blocked before they happen.</p>
+          </div>
+          <div class="m-visual v-gantt" aria-hidden="true">
+                          <div class="gantt">
+                <div class="g-hours"><span>9</span><span>11</span><span>13</span><span>15</span><span>17</span></div>
+                <div class="g-row"><label>Amira</label><div class="g-track"><i style="left:0;width:22%"></i><i style="left:30%;width:18%"></i><i class="c" style="left:62%;width:28%"></i></div></div>
+                <div class="g-row"><label>Ben</label><div class="g-track"><i class="c" style="left:8%;width:34%"></i><i style="left:55%;width:20%"></i></div></div>
+                <div class="g-row"><label>Room 2</label><div class="g-track"><i style="left:15%;width:40%"></i><i class="c" style="left:70%;width:22%"></i></div></div>
+                <div class="g-row"><label>Van 1</label><div class="g-track"><i style="left:0;width:48%"></i><i style="left:58%;width:30%"></i></div></div>
+              </div>
+                      </div>
+        </div>
+      </article>
+            <article class="moment" data-time="18:00">
+        <div class="m-time">18:00</div>
+        <div class="m-node"></div>
+        <div class="m-body">
+          <div class="m-copy">
+            <small>See how the day went</small>
+            <h3>Bookings, revenue and busy hours at a glance.</h3>
+            <p>Reports that show what’s working, so you can plan staff and offers from real numbers.</p>
+          </div>
+          <div class="m-visual v-chart" aria-hidden="true">
+                          <div class="chart">
+                <div class="c-stats"><span><b>31</b>bookings</span><span><b>£1,940</b>revenue</span><span><b>0</b>no-shows</span></div>
+                <div class="bars">
+                                      <div class="cbar"><i style="--h:48%"></i><span>M</span></div>
+                                      <div class="cbar"><i style="--h:62%"></i><span>T</span></div>
+                                      <div class="cbar"><i style="--h:55%"></i><span>W</span></div>
+                                      <div class="cbar"><i style="--h:80%"></i><span>T</span></div>
+                                      <div class="cbar"><i style="--h:95%"></i><span>F</span></div>
+                                      <div class="cbar"><i style="--h:100%"></i><span>S</span></div>
+                                      <div class="cbar"><i style="--h:40%"></i><span>S</span></div>
+                                  </div>
+              </div>
+                      </div>
+        </div>
+      </article>
+      
+      <!-- Night + form -->
+      <article class="moment night-moment" data-time="23:00" id="contact">
+        <div class="m-time">23:00</div>
+        <div class="m-node moon"></div>
+        <div class="m-body m-body-full">
+          <div class="m-copy">
+            <small>You switch off</small>
+            <h3>You sleep. <em>It keeps booking.</em></h3>
+            <p>Want to see it running for your business? Reserve a free, personalised demo. It takes 30 seconds.</p>
+          </div>
+
+          <form class="ticket" method="post" action="submit.php" novalidate data-static data-email="info@xgtech.co.uk">
+            <div class="ticket-main">
+                            
+              <div class="alert ok" data-static-ok hidden></div>
+              <div class="alert bad" data-static-bad hidden></div>
+                            <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+              <div class="t-grid">
+                <label class="f">Name
+                  <input type="text" name="name" value="" placeholder="Your full name" required>
+                                  </label>
+                <label class="f">Business
+                  <input type="text" name="business" value="" placeholder="Business name">
+                </label>
+                <label class="f">Email
+                  <input type="email" name="email" value="" placeholder="you@business.com" required>
+                                  </label>
+                <label class="f">Phone
+                  <input type="tel" name="phone" value="" placeholder="Optional">
+                                  </label>
+                <label class="f">You take bookings for
+                  <select name="service">
+                                          <option value="Appointments">Appointments</option>
+                                          <option value="Classes &amp; Training">Classes &amp; Training</option>
+                                          <option value="Events">Events</option>
+                                          <option value="Rooms &amp; Resources">Rooms &amp; Resources</option>
+                                          <option value="Something else">Something else</option>
+                                      </select>
+                </label>
+                <label class="f">Preferred demo date
+                  <input type="date" name="date" min="2026-11-25" value="">
+                                  </label>
+                <label class="f wide">Anything we should know?
+                  <textarea name="message" rows="2" placeholder="Optional"></textarea>
+                </label>
+              </div>
+            </div>
+            <div class="ticket-stub">
+              <small>Admit one</small>
+              <strong>Free<br>Demo</strong>
+              <span class="stub-code">XG-251126</span>
+              <button type="submit" class="stub-btn">Reserve →</button>
+            </div>
+          </form>
+
+          <p class="alt-contact">Prefer to talk? Call <a href="tel:01512461103">0151 246 1103</a> or email <a href="mailto:info@xgtech.co.uk">info@xgtech.co.uk</a></p>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <a class="logo" href="#top">XG<span>TECH</span></a>
+  <span>© 2026 XGTECH Ltd · Online booking, scheduling &amp; payments</span>
+  <span class="foot-links">
+    <a href="https://xgtech.co.uk/booking_sys.html">Booking system</a>
+    <a href="https://xgtech.co.uk/pricing.html">Pricing</a>
+    <a href="https://xgtech.co.uk/contact.php">Contact</a>
+    <a href="https://xgtech.co.uk/">xgtech.co.uk</a>
+  </span>
+</footer>
+
+<script src="assets/js/day.js"></script>
+</body>
+</html>
