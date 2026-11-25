@@ -34,7 +34,7 @@ $sectors = [
 $faqs = [
     ['How much does Book NBoosT cost?', "Plans start from £{$price} per month, with cloud hosting included. Pay annually and use promo code {$promoCode} to save 20%."],
     ['Can clients pay when they book?', 'Yes. Take full payment or a deposit at booking through gateways such as Stripe and PayPal, or let clients pay at the appointment, including by QR code.'],
-    ['Does it reduce no-shows?', 'Clients get automatic email and SMS reminders before their appointment, so fewer people forget or cancel at the last minute.'],
+    ['Does it reduce no-shows?', 'Clients get automatic email reminders before their appointment, so fewer people forget or cancel at the last minute.'],
     ['Can I add it to my website or social media?', 'Yes. Book NBoosT can be embedded in your existing website and linked from your social media pages, so clients book wherever they find you.'],
     ['Will it work with my team?', 'Yes. Give staff different roles and access levels, assign bookings to staff members, track clock-ins and handle class substitutions from one dashboard.'],
     ['Does it connect to my calendar and Zoom?', 'Yes. Book NBoosT integrates with Google Calendar and Zoom, so online meetings and existing calendars stay in sync.'],
@@ -84,7 +84,7 @@ $faqs = [
           <a href="#pricing" class="btn btn-lg btn-glass">See pricing</a>
         </div>
         <ul class="hero-ticks">
-          <li>Clients book 24/7</li><li>Email & SMS reminders</li><li>Paid before they arrive</li>
+          <li>Clients book 24/7</li><li>Email reminders</li><li>Paid before they arrive</li>
         </ul>
       </div>
 
@@ -101,7 +101,7 @@ $faqs = [
           <div class="ph-btn">Pay & confirm</div>
         </div>
         <div class="float f1"><span class="ic ic-green">✓</span><div><b>Booking confirmed</b><small>Skin Fade · Thu 11:30</small></div></div>
-        <div class="float f2"><span class="ic ic-blue">✉</span><div><b>SMS reminder sent</b><small>24 hours before</small></div></div>
+        <div class="float f2"><span class="ic ic-blue">✉</span><div><b>Email reminder sent</b><small>24 hours before</small></div></div>
         <div class="float f3"><span class="ic ic-cyan">▦</span><div><b>QR payment received</b><small>£15.00 · balance paid</small></div></div>
       </div>
     </div>
@@ -128,7 +128,7 @@ $faqs = [
           <ul>
             <li>Clients book themselves, day or night</li>
             <li>Live availability, so there are no double bookings</li>
-            <li>Automatic email & SMS reminders</li>
+            <li>Automatic email reminders</li>
             <li>Deposits or full payment taken at booking</li>
             <li>One dashboard for bookings, payments and staff</li>
           </ul>
@@ -164,7 +164,7 @@ $faqs = [
         <article class="tile">
           <span class="ic-big">✉</span>
           <h3>Automatic reminders</h3>
-          <p>Email and SMS reminders go out before every appointment to cut no-shows and last-minute cancellations.</p>
+          <p>Email reminders go out before every appointment to cut no-shows and last-minute cancellations.</p>
         </article>
 
         <article class="tile">
