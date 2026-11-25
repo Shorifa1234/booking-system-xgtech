@@ -235,3 +235,5 @@ h1 em{display:inline-block;padding-right:.08em}
   .g-track i,.cbar i{transform:none}
   html{scroll-behavior:auto}
 }
+.foot-links{display:flex;gap:18px;flex-wrap:wrap}
+.foot-links a:hover{color:var(--fg)}

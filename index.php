@@ -50,6 +50,7 @@ $moments = [
   <nav class="links">
     <a href="#day">A day with us</a>
     <a href="#board">Live board</a>
+    <a href="<?= e($site['pricing_url']) ?>">Pricing</a>
     <a href="#contact" class="pill-btn">Get a free demo</a>
   </nav>
 </header>
@@ -63,7 +64,7 @@ $moments = [
       <p class="lead">Customers book and pay online, reminders send themselves, and your whole team works from one schedule, even while you sleep.</p>
       <div class="hero-cta">
         <a href="#contact" class="pill-btn big">Get a free demo →</a>
-        <a href="#day" class="ghost">Scroll through a day ↓</a>
+        <a href="<?= e($site['product_url']) ?>" class="ghost">See all features</a>
       </div>
     </div>
 
@@ -255,7 +256,12 @@ $moments = [
 <footer class="foot">
   <a class="logo" href="#top">XG<span>TECH</span></a>
   <span>© <?= date('Y') ?> <?= e($site['name']) ?> Ltd · Online booking, scheduling &amp; payments</span>
-  <a href="<?= e($site['url']) ?>"><?= e(parse_url($site['url'], PHP_URL_HOST)) ?></a>
+  <span class="foot-links">
+    <a href="<?= e($site['product_url']) ?>">Booking system</a>
+    <a href="<?= e($site['pricing_url']) ?>">Pricing</a>
+    <a href="<?= e($site['contact_url']) ?>">Contact</a>
+    <a href="<?= e($site['url']) ?>"><?= e(parse_url($site['url'], PHP_URL_HOST)) ?></a>
+  </span>
 </footer>
 
 <script src="assets/js/day.js"></script>

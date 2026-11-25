@@ -11,6 +11,10 @@ $site = [
     'phone'   => '0151 246 1103',
     'phone_raw' => '01512461103',
     'url'     => 'https://xgtech.co.uk/',
+    // Pages on the main XGTECH website
+    'product_url' => 'https://xgtech.co.uk/booking_sys.html',
+    'pricing_url' => 'https://xgtech.co.uk/pricing.html',
+    'contact_url' => 'https://xgtech.co.uk/contact.php',
 ];
 
 // Database (XAMPP defaults: user root, empty password).

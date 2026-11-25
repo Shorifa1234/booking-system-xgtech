@@ -11,6 +11,8 @@
           <a href="#how-it-works">How It Works</a>
           <a href="#industries">Industries</a>
           <a href="#contact">Book a Demo</a>
+          <a href="<?= e($site['product_url']) ?>">Booking System</a>
+          <a href="<?= e($site['pricing_url']) ?>">Pricing</a>
         </div>
         <div>
           <h4>Contact <?= e($site['name']) ?></h4>
