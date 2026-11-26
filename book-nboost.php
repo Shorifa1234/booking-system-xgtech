@@ -78,7 +78,7 @@ $faqs = [
   <section class="hero">
     <div class="wrap hero-in">
       <div class="hero-copy">
-        <a class="price-chip" href="#pricing"><span>Offer</span> Plans from £<?= $price ?>/month · Save 20% yearly →</a>
+        <a class="price-chip" href="#pricing"><img class="chip-logo" src="assets/img/book-nboost-logo.png" alt="Book NBoost" width="324" height="112"> Plans from £<?= $price ?>/month · Save 20% yearly →</a>
         <h1><span class="grad">Stop chasing appointments.</span> <em>Let clients book themselves.</em></h1>
         <p class="sub">Book NBoosT is appointment scheduling software that takes bookings, payments and reminders off your hands, so there are fewer phone calls, fewer back-and-forth emails and fewer no-shows.</p>
         <div class="hero-btns">

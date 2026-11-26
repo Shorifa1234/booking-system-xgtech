@@ -56,7 +56,7 @@ em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.0
 .hero-in{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
 .price-chip{display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 6px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);font-size:14px;color:#d8e6f4;transition:background .2s}
 .price-chip:hover{background:rgba(255,255,255,.13)}
-.price-chip span{background:var(--mint);color:var(--deep);font-weight:700;font-size:12px;padding:3px 10px;border-radius:999px}
+.price-chip .chip-logo{display:block;height:30px;width:auto;background:#fff;padding:3px 10px;border-radius:999px}
 h1{font-size:clamp(42px,6vw,76px);font-weight:600;letter-spacing:-.045em;line-height:1.02;margin:26px 0 22px}
 h1 em{color:var(--cyan);display:block}
 h1 .grad{color:#2ee340}
