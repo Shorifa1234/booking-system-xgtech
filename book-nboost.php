@@ -66,7 +66,7 @@ $faqs = [
       <a href="#cost">No-show cost</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
-      <a href="#contact" class="btn btn-sm">Get a free demo</a>
+      <a href="https://www.xgtech.co.uk/booking.html" class="btn btn-sm">Get a free demo</a>
     </nav>
     <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
   </div>
