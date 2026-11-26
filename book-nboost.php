@@ -27,8 +27,8 @@ $planIncludes = [
 ];
 
 $sectors = [
-    ['💈', 'Barbers'], ['💇', 'Salons & Beauty'], ['⚖️', 'Solicitors'], ['📊', 'Accountants'],
-    ['🩺', 'Doctors & Clinics'], ['🎓', 'Education & Training'], ['🏋️', 'Gym & Fitness'], ['＋', 'Any appointment business'],
+    ['🎉', 'Event Management'], ['🏢', 'Facilities Management'], ['🧽', 'Cleaning / Hygiene'], ['🐜', 'Pest Control'],
+    ['🏊', 'Swimming / Dance Classes'], ['🎓', 'Instructor'], ['💆', 'Therapist / PT'], ['＋', 'Any appointment business'],
 ];
 
 $faqs = [
