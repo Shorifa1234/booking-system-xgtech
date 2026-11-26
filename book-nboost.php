@@ -133,6 +133,11 @@ $faqs = [
             <li>Automatic email reminders</li>
             <li>Deposits or full payment taken at booking</li>
             <li>One dashboard for bookings, payments and staff</li>
+            <li>Easy rescheduling, so clients can move their own booking</li>
+            <li>Built-in communication with clients, all in one place</li>
+            <li>Lead capturing that turns enquiries into bookings</li>
+            <li>Separate customer, staff and admin portals</li>
+            <li>Integration with Facebook, LinkedIn, Instagram and more</li>
           </ul>
         </div>
       </div>
