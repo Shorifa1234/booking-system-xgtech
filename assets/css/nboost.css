@@ -35,6 +35,8 @@ em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.0
 .nav{position:fixed;inset:0 0 auto;z-index:60;transition:background .25s,box-shadow .25s}
 .nav-in{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .nav.solid{background:rgba(11,27,45,.92);backdrop-filter:blur(12px);box-shadow:0 8px 30px rgba(0,0,0,.18)}
+.brand img{display:block;height:46px;width:auto}
+.brand-foot img{height:58px}
 .brand{display:inline-flex;align-items:center;gap:10px;font-size:20px;color:#fff;letter-spacing:-.5px}
 .brand b{color:var(--cyan)}
 .brand-mark{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-weight:700;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;box-shadow:0 6px 16px rgba(53,197,220,.35)}

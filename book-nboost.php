@@ -53,12 +53,14 @@ $faqs = [
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/nboost.css">
+  <link rel="icon" type="image/png" href="assets/img/book-nboost-icon.png">
+  <meta property="og:image" content="https://shorifa1234.github.io/booking-system-xgtech/assets/img/book-nboost-logo.png">
 </head>
 <body>
 
 <header class="nav" id="nav">
   <div class="wrap nav-in">
-    <a class="brand" href="#top" aria-label="Book NBoosT home"><span class="brand-mark">B</span><span>Book <b>NBoosT</b></span></a>
+    <a class="brand" href="#top"><img src="assets/img/book-nboost-logo.png" alt="Book NBoost" width="324" height="112"></a>
     <nav class="nav-links" id="navLinks">
       <a href="#features">Features</a>
       <a href="#cost">No-show cost</a>
@@ -393,7 +395,7 @@ $faqs = [
 <footer class="foot">
   <div class="wrap foot-in">
     <div>
-      <a class="brand" href="#top"><span class="brand-mark">B</span><span>Book <b>NBoosT</b></span></a>
+      <a class="brand brand-foot" href="#top"><img src="assets/img/book-nboost-logo.png" alt="Book NBoost" width="324" height="112" loading="lazy"></a>
       <p>Appointment booking software by <a href="<?= e($site['url']) ?>"><?= e($site['name']) ?></a>.</p>
     </div>
     <div class="foot-links">
