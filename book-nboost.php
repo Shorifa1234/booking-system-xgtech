@@ -52,7 +52,7 @@ $faqs = [
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/nboost.css">
+  <link rel="stylesheet" href="assets/css/nboost.css?v=<?= filemtime(__DIR__ . '/assets/css/nboost.css') ?>">
   <link rel="icon" type="image/png" href="assets/img/book-nboost-icon.png">
   <meta property="og:image" content="https://shorifa1234.github.io/booking-system-xgtech/assets/img/book-nboost-logo.png">
 </head>
@@ -412,7 +412,7 @@ $faqs = [
 <!-- Sticky mobile CTA -->
 <a href="#contact" class="sticky-cta" id="stickyCta">Book a free demo · from £<?= $price ?>/mo →</a>
 
-<script src="assets/js/nboost.js"></script>
-<?php if ($static): ?><script src="assets/js/static-form.js"></script><?php endif; ?>
+<script src="assets/js/nboost.js?v=<?= filemtime(__DIR__ . '/assets/js/nboost.js') ?>"></script>
+<?php if ($static): ?><script src="assets/js/static-form.js?v=<?= filemtime(__DIR__ . '/assets/js/static-form.js') ?>"></script><?php endif; ?>
 </body>
 </html>
